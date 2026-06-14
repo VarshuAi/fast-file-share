@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0b0e17"
+    android:padding="24dp">
+
+    <!-- Header area -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚡ Fast File Share"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High-Speed Offline File Sharing"
+        android:textColor="#94a3b8"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Status Card Box -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statusCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#161f30"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvStatusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVER STATUS"
+                android:textColor="#94a3b8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/tvStatusValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STOPPED"
+                android:textColor="#ef4444"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#233554"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:id="@+id/tvIpLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVER IP ADDRESS"
+                android:textColor="#94a3b8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvIpValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="http://---.---.---.---:8080"
+                android:textColor="#0084ff"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#233554"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:id="@+id/tvTvLinkLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BROWSER SHARE LINK"
+                android:textColor="#94a3b8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTvLinkValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="http://---.---.---.---:8080/client/index.html"
+                android:textColor="#d4af37"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Main Toggle Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToggleServer"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Start Server"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:cornerRadius="12dp"
+        android:backgroundTint="#0084ff"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/statusCard" />
+
+    <!-- Open Remote Controller Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenRemote"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Open Share Dashboard"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:cornerRadius="12dp"
+        android:backgroundTint="#d4af37"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnToggleServer" />
+
+    <!-- Setup Guide Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#0f172a"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenRemote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Hotspot Guide:"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Turn on your mobile's Wi-Fi Hotspot or connect both devices to the same Wi-Fi.\n2. Tap 'Start Server' above.\n3. Open the Browser Share Link on your PC or another device to start high-speed file transfer."
+            android:textColor="#94a3b8"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

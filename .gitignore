@@ -1,0 +1,23 @@
+# Node.js dependencies
+server/node_modules/
+server/uploads/
+
+# Android build outputs and caches
+android-app/.gradle/
+android-app/local.properties
+android-app/app/build/
+android-app/build/
+.gradle/
+**/build/
+
+# Ignore compiled APKs except maybe if we want to commit fast-file-share.apk?
+# Typically, built binaries are not committed to git repositories, but we want to make sure. Let's ignore *.apk except we can add an exception or ignore it fully. The user said: "now i will compile using github i will push to https://github.com/VarshuAi/fast-file-share".
+# So they want the source code pushed, and the APK compiled here. We can ignore *.apk in .gitignore.
+*.apk
+
+# System and IDE configurations
+.idea/
+.vscode/
+*.iml
+*.log
+.DS_Store
