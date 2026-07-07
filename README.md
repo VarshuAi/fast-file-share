@@ -3,13 +3,12 @@
 
 <img src="https://raw.githubusercontent.com/VarshuAi/VarshuAi/main/assets/boot.svg" width="100%"/>
 
-![Theme](https://img.shields.io/badge/Tuesday-DeepBlue_OS-0074D9?style=flat-square&labelColor=0D1117)
-![Distro](https://img.shields.io/badge/VarshuOS-Abyss-7FDBFF?style=flat-square&labelColor=0D1117)
+![Theme](https://img.shields.io/badge/Wednesday-NeonArc_OS-FF00FF?style=flat-square&labelColor=0D1117)
+![Distro](https://img.shields.io/badge/VarshuOS-Glitch-DA70D6?style=flat-square&labelColor=0D1117)
 
 </div>
 
 <!-- VARSHUOS-THEME-END -->
-
 # Fast File Share ⚡
 
 Fast File Share is a high-speed, local, offline file sharing tool that enables seamless bidirectional file transfers between your mobile devices and PCs. It operates entirely within your local network (Wi-Fi or Hotspot) and does not require an active internet connection.
